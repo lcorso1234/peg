@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1a1a1a;
+  --foreground: #ededed;
+  --gunmetal: #2d3436;
+  --gunmetal-light: #3a3f42;
+  --neon-green: #39ff14;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gunmetal: var(--gunmetal);
+  --color-gunmetal-light: var(--gunmetal-light);
+  --color-neon-green: var(--neon-green);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Noise texture background */
+.noise-bg {
+  background-color: #1a1a1a;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+}
+
+/* 3D Business Card Effect */
+.business-card {
+  background: linear-gradient(145deg, #2d3436, #252829);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transform: perspective(1000px) rotateX(2deg);
+  transition: transform 0.3s ease;
+}
+
+.business-card:hover {
+  transform: perspective(1000px) rotateX(0deg) translateY(-5px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6), 0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Neon green glow effect */
+.shadow-neon {
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14,
+    0 0 30px rgba(57, 255, 20, 0.5);
+}
+
+/* Button shadows */
+.shadow-button {
+  box-shadow: 0 4px 15px rgba(57, 255, 20, 0.4),
+    0 8px 25px rgba(57, 255, 20, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.shadow-button-hover {
+  box-shadow: 0 6px 20px rgba(57, 255, 20, 0.6),
+    0 12px 35px rgba(57, 255, 20, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* Jiggle Animation */
+@keyframes jiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(-3deg);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(3deg);
+  }
+}
+
+.jiggle {
+  animation: jiggle 0.6s ease-in-out;
+}
+
+/* Gunmetal colors */
+.bg-gunmetal {
+  background-color: var(--gunmetal);
+}
+
+.bg-gunmetal-light {
+  background-color: var(--gunmetal-light);
+}
+
+.bg-neon-green {
+  background-color: var(--neon-green);
+}
+
+.text-neon-green {
+  color: var(--neon-green);
+}
+
+.text-gunmetal {
+  color: var(--gunmetal);
+}
