@@ -7,7 +7,7 @@ export default function Home() {
   const phoneNumber = '7089066526';
   const contactFileName = 'Peggy_McNagle.vcf';
   const smsMessage = encodeURIComponent(
-    'Hi! Thanks for connecting with Peggy McNagle at McNagle Dental. Looking forward to helping you stop hiding your smile!'
+    'Hi! Thanks for connecting with Peggy McNagle at McGonigle Dental. [Put Name Here]'
   );
 
   const saveContact = () => {
@@ -16,7 +16,7 @@ VERSION:3.0
 FN:Peggy McNagle
 N:McNagle;Peggy;;;
 TEL;TYPE=CELL:${phoneNumber}
-ORG:McNagle Dental
+ORG:McGonigle Dental
 URL:https://mcnagledental.com
 NOTE:Stop hiding your smile
 END:VCARD`;
@@ -68,7 +68,7 @@ END:VCARD`;
           {/* Note */}
           <div className="text-center mb-8 py-4">
             <p className="text-neon-green text-2xl font-bold italic tracking-wide glow-text">
-              "Stop hiding your smile"
+              &quot;Stop hiding your smile&quot;
             </p>
           </div>
 
