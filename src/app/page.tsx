@@ -5,19 +5,19 @@ import { useState } from 'react';
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
   const phoneNumber = '7089066526';
-  const contactFileName = 'Peggy_McGonigle.vcf';
+  const contactFileName = 'Peggy_McNagle.vcf';
   const smsMessage = encodeURIComponent(
-    'Hi! Thanks for connecting with Peggy McGonigle at McGonigle Dental. Looking forward to helping you stop hiding your smile!'
+    'Hi! Thanks for connecting with Peggy McNagle at McNagle Dental. Looking forward to helping you stop hiding your smile!'
   );
 
   const saveContact = () => {
     const vCard = `BEGIN:VCARD
 VERSION:3.0
-FN:Peggy McGonigle
-N:McGonigle;Peggy;;;
+FN:Peggy McNagle
+N:McNagle;Peggy;;;
 TEL;TYPE=CELL:${phoneNumber}
-ORG:McGonigle Dental
-URL:https://mcgonigledental.com
+ORG:McNagle Dental
+URL:https://mcnagledental.com
 NOTE:Stop hiding your smile
 END:VCARD`;
 
@@ -60,7 +60,7 @@ END:VCARD`;
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-white mb-2 tracking-wide">
-              Peggy McGonigle
+              Peggy McNagle
             </h1>
             <div className="w-20 h-1 bg-neon-green mx-auto rounded-full shadow-neon"></div>
           </div>
