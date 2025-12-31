@@ -17,7 +17,7 @@ FN:Peggy McNagle
 N:McNagle;Peggy;;;
 TEL;TYPE=CELL:${phoneNumber}
 ORG:McGonigle Dental
-URL:https://mcnagledental.com
+URL:https://mcgonigledental.com
 NOTE:Stop hiding your smile
 END:VCARD`;
 
